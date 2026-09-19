@@ -1,17 +1,14 @@
-import { useRouter } from 'next/router';
 import { Nav, Logo, NavLinks, NavLink } from './styles';
 
 const links = [
-  { href: '/', label: 'Início' },
-  { href: '/sobre', label: 'Quem somos' },
-  { href: '/adocao', label: 'Adoção' },
-  { href: '/doe', label: 'Como ajudar' },
-  { href: '/contato', label: 'Contato' },
+  { href: '#inicio', label: 'Início' },
+  { href: '#sobre', label: 'Quem somos' },
+  { href: '#adocao', label: 'Adoção' },
+  { href: '#ajudar', label: 'Como ajudar' },
+  { href: '#contato', label: 'Contato' },
 ];
 
 export default function Header() {
-  const { pathname } = useRouter();
-
   return (
     <Nav>
       <Logo href="/">
@@ -19,7 +16,7 @@ export default function Header() {
       </Logo>
       <NavLinks>
         {links.map(link => (
-          <NavLink key={link.href} href={link.href} $active={pathname === link.href}>
+          <NavLink key={link.href} href={link.href}>
             {link.label}
           </NavLink>
         ))}

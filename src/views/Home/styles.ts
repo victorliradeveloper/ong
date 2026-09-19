@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import { colors } from '@/constants/theme';
 
-export const Hero = styled.section`
+export const Hero = styled.div`
   background-color: ${colors.primary};
   color: ${colors.white};
   padding: 80px 40px;
@@ -32,7 +32,7 @@ export const HeroButtons = styled.div`
   flex-wrap: wrap;
 `;
 
-export const ButtonPrimary = styled(Link)`
+export const ButtonPrimary = styled.a`
   background-color: ${colors.white};
   color: ${colors.primary};
   padding: 14px 32px;
@@ -45,7 +45,7 @@ export const ButtonPrimary = styled(Link)`
   &:hover { opacity: 0.9; }
 `;
 
-export const ButtonOutline = styled(Link)`
+export const ButtonOutline = styled.a`
   border: 2px solid ${colors.white};
   color: ${colors.white};
   padding: 14px 32px;
@@ -58,7 +58,7 @@ export const ButtonOutline = styled(Link)`
   &:hover { background: rgba(255,255,255,0.1); }
 `;
 
-export const Stats = styled.section`
+export const Stats = styled.div`
   background-color: ${colors.light};
   padding: 60px 40px;
   display: flex;
@@ -83,8 +83,8 @@ export const StatLabel = styled.div`
   margin-top: 4px;
 `;
 
-export const Section = styled.section`
-  padding: 60px 40px;
+export const Section = styled.div`
+  padding: 40px 40px;
   max-width: 1100px;
   margin: 0 auto;
 `;
@@ -132,4 +132,104 @@ export const CardText = styled.p`
   font-size: 13px;
   color: ${colors.gray};
   line-height: 1.6;
+`;
+
+export const AboutSection = styled.div`
+  padding: 60px 40px 0;
+  max-width: 1100px;
+  margin: 0 auto;
+`;
+
+export const AboutText = styled.p`
+  font-size: 15px;
+  color: ${colors.gray};
+  line-height: 1.8;
+  margin-bottom: 16px;
+  max-width: 800px;
+`;
+
+export const AdoptionBanner = styled.div`
+  background-color: ${colors.primary};
+  color: ${colors.white};
+  padding: 60px 40px;
+  text-align: center;
+`;
+
+export const AdoptionText = styled.p`
+  font-size: 16px;
+  color: ${colors.accentLight};
+  max-width: 600px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+`;
+
+export const AdoptionButton = styled.a`
+  background-color: ${colors.white};
+  color: ${colors.primary};
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.2s;
+
+  &:hover { opacity: 0.9; }
+`;
+
+export const HelpGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const HelpCard = styled.div`
+  background: ${colors.grayLight};
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  border-top: 4px solid ${colors.accent};
+`;
+
+export const HelpCardTitle = styled.h3`
+  font-size: 16px;
+  color: ${colors.primary};
+  margin-bottom: 8px;
+`;
+
+export const HelpCardText = styled.p`
+  font-size: 13px;
+  color: ${colors.gray};
+  line-height: 1.6;
+`;
+
+export const ContactSection = styled.div`
+  background-color: ${colors.light};
+  padding: 60px 40px;
+  text-align: center;
+`;
+
+export const ContactInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin-top: 16px;
+`;
+
+export const ContactItem = styled.p`
+  font-size: 15px;
+  color: ${colors.gray};
+
+  a {
+    color: ${colors.primary};
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover { text-decoration: underline; }
+  }
 `;

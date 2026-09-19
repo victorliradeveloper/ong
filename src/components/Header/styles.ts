@@ -36,11 +36,10 @@ export const NavLinks = styled.nav`
   }
 `;
 
-export const NavLink = styled(Link)<{ $active: boolean }>`
-  color: ${({ $active }) => ($active ? colors.accentLight : colors.white)};
+export const NavLink = styled.a`
+  color: ${colors.white};
   text-decoration: none;
   font-size: 14px;
-  font-weight: ${({ $active }) => ($active ? 'bold' : 'normal')};
   transition: color 0.2s;
 
   &:hover {
